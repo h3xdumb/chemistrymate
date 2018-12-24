@@ -1,2 +1,2 @@
-# chemistrymate
-Repository for AR class
+# ChemistryMate
+

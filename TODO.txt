@@ -1,0 +1,5 @@
+Die Schüler erhalten ein Dropdown in dem alle bereits gelernten Moleküle 
+stehen, es besteht die Möglichkeit im unterricht gemeinsam neue elemente 
+zu erarbeiten und in die liste einzufügen um sie zuhause 
+nachzuvollziehen.
+
