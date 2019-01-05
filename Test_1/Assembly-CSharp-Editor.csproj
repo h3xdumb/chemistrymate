@@ -53,6 +53,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Editor\EffectControllerInspector.cs" />
+     <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Editor\EffectToolBar.cs" />
+     <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Editor\RenderEffectInspector.cs" />
+     <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Editor\ShaderCustomEditor\ShaderMaterialsEditor.cs" />
+     <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Editor\XUIUtils.cs" />
+     <Compile Include="Assets\ParticleSystemPreview\Editor\OverrideEditor.cs" />
+     <Compile Include="Assets\ParticleSystemPreview\Editor\ParticleSystemEditorUtilsReflect.cs" />
+     <Compile Include="Assets\ParticleSystemPreview\Editor\ParticleSystemGameObjectEditor.cs" />
+     <Compile Include="Assets\ParticleSystemPreview\Editor\ParticleSystemPreview.cs" />
      <Compile Include="Assets\StarTools\Editor\StarEditor.cs" />
      <None Include="Assets\Editor\Vuforia\CylinderTargetTextures\VuforiaMars_Images\authoringinfo.xml" />
  <Reference Include="UnityEditor.StandardEvents">
