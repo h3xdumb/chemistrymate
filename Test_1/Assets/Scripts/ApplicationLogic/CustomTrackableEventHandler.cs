@@ -9,6 +9,12 @@ public class CustomTrackableEventHandler : MonoBehaviour, ITrackableEventHandler
     private TrackableBehaviour trackableBehaviour;
     private TrackableBehaviour.Status m_PreviousStatus;
     private TrackableBehaviour.Status m_NewStatus;
+
+    public CustomTrackableEventHandler(TrackableBehaviour trackableBehaviour)
+    {
+        this.trackableBehaviour = trackableBehaviour;
+    }
+
     public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus)
     {
         m_PreviousStatus = previousStatus;
@@ -18,6 +24,7 @@ public class CustomTrackableEventHandler : MonoBehaviour, ITrackableEventHandler
             newStatus == TrackableBehaviour.Status.TRACKED ||
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
         {
+
            /*
             * trackable found
             */ 
@@ -47,12 +54,14 @@ public class CustomTrackableEventHandler : MonoBehaviour, ITrackableEventHandler
 
     private void OnTrackingFound()
     {
+
+        DynamicLoader dynamicLoader = FindObjectOfType<DynamicLoader>();
         int n = 0;
         bool isNumeric = Int32.TryParse(trackableBehaviour.TrackableName, out n);
 
         if (isNumeric)
         {
-
+            dynamicLoader.getMolekule(n);
         }
     }
 
@@ -60,11 +69,16 @@ public class CustomTrackableEventHandler : MonoBehaviour, ITrackableEventHandler
 
     // Use this for initialization
     void Start () {
-        trackableBehaviour = GetComponent<TrackableBehaviour>();
-        if (trackableBehaviour)
+        IEnumerable<TrackableBehaviour> tbs = TrackerManager.Instance.GetStateManager().GetTrackableBehaviours();
+        foreach (Vuforia.ImageTargetBehaviour tb in tbs)
         {
-            trackableBehaviour.RegisterTrackableEventHandler(this);
+            if (tb)
+            {
+                tb.RegisterTrackableEventHandler(new CustomTrackableEventHandler(tb));
+            }
+
         }
+        
 	}
 
     void OnDestroy()
