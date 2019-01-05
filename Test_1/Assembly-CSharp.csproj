@@ -55,6 +55,12 @@
   <ItemGroup>
      <Compile Include="Assets\DynamicLoader.cs" />
      <Compile Include="Assets\EventHandler.cs" />
+     <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Script\CameraTarget.cs" />
+     <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Script\EffectController.cs" />
+     <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Script\EffectDemo.cs" />
+     <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Script\EffectShaderPropertyStr.cs" />
+     <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Script\RenderEffect.cs" />
+     <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Script\TransformExtension.cs" />
      <Compile Include="Assets\Scripts\ApplicationLogic\ButtonHandler.cs" />
      <Compile Include="Assets\Scripts\ApplicationLogic\ChemLogic.cs" />
      <Compile Include="Assets\Scripts\ApplicationLogic\Constants.cs" />
@@ -77,17 +83,25 @@
      <None Include="Assets\StreamingAssets\Vuforia\ChemistryMate.xml" />
      <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
      <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
+     <None Include="Assets\Particlecollection_Free samples\Plugins\Effect\Shader\effect_distortion_mask.shader" />
      <None Include="Assets\StreamingAssets\Vuforia\chemM_db.xml" />
      <None Include="Assets\StarTools\Assets\3DStarShader.shader" />
+     <None Include="Assets\Particlecollection_Free samples\Plugins\Effect\Shader\ParticleAddSoftEffect.shader" />
      <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
      <None Include="Assets\Vuforia\Databases\Emulator\VuforiaEmulator.xml" />
      <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Images.xml" />
+     <None Include="Assets\Particlecollection_Free samples\Plugins\Effect\Shader\Toon Blended Premmultiply.shader" />
+     <None Include="Assets\Particlecollection_Free samples\Plugins\Effect\Shader\ParticlePremultiplyBlend.shader" />
      <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
+     <None Include="Assets\Particlecollection_Free samples\READ ME.txt" />
      <None Include="Assets\StarTools\Assets\CoronaShader.shader" />
      <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
+     <None Include="Assets\Particlecollection_Free samples\Plugins\Effect\Shader\ParticleAddEffect.shader" />
      <None Include="Assets\Vuforia\Shaders\DepthContour.shader" />
+     <None Include="Assets\Particlecollection_Free samples\Plugins\Effect\Shader\Toon Additive.shader" />
      <None Include="Assets\StarTools\Assets\WebGLNoisePort\noiseSimplex.cginc" />
      <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
+     <None Include="Assets\Particlecollection_Free samples\Plugins\Effect\Shader\ParticleBlendEffect.shader" />
      <None Include="Assets\StarTools\Assets\noiseHelper.cginc" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>D:/GITHUB/chemistrymate/Test_1/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
