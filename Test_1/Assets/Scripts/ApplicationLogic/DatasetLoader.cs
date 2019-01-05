@@ -57,11 +57,8 @@ public class DatasetLoader : MonoBehaviour
                     tb.gameObject.AddComponent<TurnOffBehaviour>();
  
                     if (augmentationObject != null) {
-
                         // instantiate augmentation object and parent to trackable
                         GameObject augmentation = (GameObject)GameObject.Instantiate(augmentationObject);
-                    Halo halo = new UnityEngine.Halo();
-                    augmentation.AddComponent<Halo>();
                         augmentation.transform.parent = tb.gameObject.transform;
                         augmentation.transform.localPosition = new Vector3(0f, 0f, 0f);
                         augmentation.transform.localRotation = Quaternion.identity;
