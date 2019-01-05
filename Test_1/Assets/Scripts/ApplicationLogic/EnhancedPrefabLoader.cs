@@ -33,6 +33,11 @@ public class EnhancedPrefabLoader : MonoBehaviour, ITrackableEventHandler {
   {
     if (myModelPrefab != null)
     {
+            if (mTrackableBehaviour.TrackableName.Equals("2"))
+            {
+                Debug.Log("FOUND 2!");
+            }
+
       Transform myModelTrf = GameObject.Instantiate(myModelPrefab) as Transform;
       myModelTrf.parent = mTrackableBehaviour.transform;
       myModelTrf.localPosition = new Vector3(0f, 0f, 0f);
