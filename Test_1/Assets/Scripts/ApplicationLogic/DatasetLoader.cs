@@ -7,6 +7,8 @@ using System.Collections.Generic;
  
 public class DatasetLoader : MonoBehaviour
 {
+
+    DynamicLoader dl=new DynamicLoader();
     // specify these in Unity Inspector
     private Dictionary<string, GameObject> gameObjects; // you can use teapot or other object
     public string dataSetName;  //  Assets/StreamingAssets/QCAR/DataSetName
@@ -47,9 +49,7 @@ public class DatasetLoader : MonoBehaviour
 
                 GameObject augmentationObject;
                 gameObjects.TryGetValue(tb.TrackableName, out augmentationObject);
-                    
-                    
-                   
+
                     tb.gameObject.name = ++counter + ":DynamicImageTarget-" + tb.TrackableName;
  
                     // add additional script components for trackable
@@ -57,6 +57,7 @@ public class DatasetLoader : MonoBehaviour
                     tb.gameObject.AddComponent<TurnOffBehaviour>();
  
                     if (augmentationObject != null) {
+
                         // instantiate augmentation object and parent to trackable
                         GameObject augmentation = (GameObject)GameObject.Instantiate(augmentationObject);
                         augmentation.transform.parent = tb.gameObject.transform;
